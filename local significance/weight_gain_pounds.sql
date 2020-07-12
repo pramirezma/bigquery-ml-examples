@@ -8,7 +8,7 @@ OPTIONS
 
 # Variables
 SELECT
-    weight_gain_pounds,
+    IFNULL (weight_gain_pounds, 0) AS weight_gain_pounds,
     IFNULL(weight_pounds, 0) AS weight_pounds
 FROM
   `bigquery-public-data.samples.natality`
